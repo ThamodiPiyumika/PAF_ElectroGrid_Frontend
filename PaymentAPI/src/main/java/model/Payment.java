@@ -23,7 +23,7 @@ public class Payment {
 	 return con; 
 	 } 
 	
-	public String insertPayment(String CustomerName, String Address, String Expiry, String BillNo, String Amount) 
+	public String insertPayment(String CustomerName, String Address, String AccountNo, String BillNo, String Amount) 
 	 { 
 	 String output = ""; 
 	 try
@@ -39,7 +39,7 @@ public class Payment {
 	 preparedStmt.setInt(1, 0); 
 	 preparedStmt.setString(2, CustomerName); 
 	 preparedStmt.setString(3, Address); 
-	 preparedStmt.setString(4, Expiry); 
+	 preparedStmt.setString(4, AccountNo); 
 	 preparedStmt.setInt(5, Integer.parseInt(BillNo));
 	 preparedStmt.setInt(6, Integer.parseInt(Amount));
 	 // execute the statement
